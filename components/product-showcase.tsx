@@ -5,6 +5,7 @@ const products = [
   {
     id: 1,
     name: "GemDerma Pro",
+    slug: "gemderma-pro",
     description: "Advanced 4-in-1 skincare device",
     status: "Coming Soon",
     badge: " ",
@@ -13,6 +14,7 @@ const products = [
   {
     id: 2,
     name: "GemSan",
+    slug: "gemsan",
     description: "UVC Sterilization for Beauty Tools",
     status: "Coming Soon",
     badge: " ",
@@ -21,6 +23,7 @@ const products = [
   {
     id: 3,
     name: "GemDerma Eye",
+    slug: "gemderma-eye",
     description: "Targeted Treatment for Under-Eye Glow",
     status: "Coming Soon",
     badge: " ",
@@ -42,7 +45,7 @@ export function ProductShowcase() {
           <div className="grid grid-cols-3 gap-8">
             {products.map((product) => (
               <div key={product.id} className="group">
-                <Link href={`/products/${product.id}`}>
+                <Link href={`/products/${product.slug}`}>
                   <div className="relative bg-gradient-to-br from-white to-gray-50 aspect-square overflow-hidden">
                     <Image
                       src={product.image || "/placeholder.svg"}
@@ -56,7 +59,11 @@ export function ProductShowcase() {
                 {/* Product Info */}
                 <div className="p-6 space-y-3">
                   <div>
-                    <h3 className="font-serif text-lg font-bold">{product.name}</h3>
+                    <Link href={`/products/${product.slug}`}>
+                      <h3 className="font-serif text-lg font-bold hover:text-accent transition-colors duration-300">
+                        {product.name}
+                      </h3>
+                    </Link>
                     <p className="text-sm text-muted-foreground mt-1">{product.description}</p>
                   </div>
 
