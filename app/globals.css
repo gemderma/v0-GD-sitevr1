@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Reverted to original warm luxury color palette */
+  --background: 252 249 246; /* Warm ivory */
+  --foreground: 41 37 36; /* Deep charcoal */
+  --card: 255 255 255;
+  --card-foreground: 41 37 36;
+  --popover: 255 255 255;
+  --popover-foreground: 41 37 36;
+  --primary: 41 37 36;
+  --primary-foreground: 252 249 246;
+  --secondary: 252 249 246;
+  --secondary-foreground: 41 37 36;
+  --muted: 245 242 239;
+  --muted-foreground: 120 113 108;
+  --accent: 184 134 134; /* Rose gold */
+  --accent-foreground: 252 249 246;
+  --destructive: 239 68 68;
+  --destructive-foreground: 255 255 255;
+  --border: 231 229 228;
+  --input: 231 229 228;
+  --ring: 184 134 134;
+  --chart-1: 184 134 134;
+  --chart-2: 120 113 108;
+  --chart-3: 41 37 36;
+  --chart-4: 210 180 180;
+  --chart-5: 245 242 239;
+  --radius: 0.5rem;
+  --sidebar: 252 249 246;
+  --sidebar-foreground: 41 37 36;
+  --sidebar-primary: 41 37 36;
+  --sidebar-primary-foreground: 252 249 246;
+  --sidebar-accent: 245 242 239;
+  --sidebar-accent-foreground: 41 37 36;
+  --sidebar-border: 231 229 228;
+  --sidebar-ring: 184 134 134;
+}
+
+.dark {
+  --background: 41 37 36;
+  --foreground: 252 249 246;
+  --card: 41 37 36;
+  --card-foreground: 252 249 246;
+  --popover: 41 37 36;
+  --popover-foreground: 252 249 246;
+  --primary: 252 249 246;
+  --primary-foreground: 41 37 36;
+  --secondary: 57 53 52;
+  --secondary-foreground: 252 249 246;
+  --muted: 57 53 52;
+  --muted-foreground: 168 162 158;
+  --accent: 184 134 134;
+  --accent-foreground: 252 249 246;
+  --destructive: 239 68 68;
+  --destructive-foreground: 252 249 246;
+  --border: 57 53 52;
+  --input: 57 53 52;
+  --ring: 184 134 134;
+  --chart-1: 184 134 134;
+  --chart-2: 168 162 158;
+  --chart-3: 210 180 180;
+  --chart-4: 120 113 108;
+  --chart-5: 245 242 239;
+  --sidebar: 41 37 36;
+  --sidebar-foreground: 252 249 246;
+  --sidebar-primary: 184 134 134;
+  --sidebar-primary-foreground: 252 249 246;
+  --sidebar-accent: 57 53 52;
+  --sidebar-accent-foreground: 252 249 246;
+  --sidebar-border: 57 53 52;
+  --sidebar-ring: 184 134 134;
+}
+
+@theme inline {
+  /* Reverted to original elegant serif and sans-serif fonts */
+  --font-sans: "Inter", "Inter Fallback";
+  --font-serif: "Cormorant Garamond", "Cormorant Garamond Fallback";
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-popover: rgb(var(--popover));
+  --color-popover-foreground: rgb(var(--popover-foreground));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-destructive: rgb(var(--destructive));
+  --color-destructive-foreground: rgb(var(--destructive-foreground));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+  --color-chart-1: rgb(var(--chart-1));
+  --color-chart-2: rgb(var(--chart-2));
+  --color-chart-3: rgb(var(--chart-3));
+  --color-chart-4: rgb(var(--chart-4));
+  --color-chart-5: rgb(var(--chart-5));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: rgb(var(--sidebar));
+  --color-sidebar-foreground: rgb(var(--sidebar-foreground));
+  --color-sidebar-primary: rgb(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: rgb(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: rgb(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: rgb(var(--sidebar-accent-foreground));
+  --color-sidebar-border: rgb(var(--sidebar-border));
+  --color-sidebar-ring: rgb(var(--sidebar-ring));
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
