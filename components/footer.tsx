@@ -16,28 +16,24 @@ export function Footer() {
             <h4 className="font-serif font-semibold mb-4 text-sm tracking-wider uppercase">SUPPORT</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link
-                  href="/products"
-                  className="text-muted-foreground hover:text-accent transition-colors duration-500"
-                >
-                  How To Use
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/new"
-                  className="text-muted-foreground hover:text-accent transition-colors duration-500"
-                >
+                <Link href="/faq" className="text-muted-foreground hover:text-accent transition-colors duration-500">
                   FAQ
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/bestsellers"
+                  href="/skin-quiz"
+                  className="text-muted-foreground hover:text-accent transition-colors duration-500"
+                >
+                  Skin Quiz
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="mailto:support@gemderma.com"
                   className="text-muted-foreground hover:text-accent transition-colors duration-500"
                 >
                   Contact Us
-
                 </Link>
               </li>
             </ul>
@@ -48,7 +44,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  href="/technology"
+                  href="/science"
                   className="text-muted-foreground hover:text-accent transition-colors duration-500"
                 >
                   Science
@@ -60,7 +56,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                
+                <Link href="/blog" className="text-muted-foreground hover:text-accent transition-colors duration-500">
+                  Blog
+                </Link>
               </li>
             </ul>
           </div>

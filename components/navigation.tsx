@@ -1,20 +1,52 @@
 "use client"
 
 import Link from "next/link"
+import { useState } from "react"
 
 export function Navigation() {
+  const [isShopOpen, setIsShopOpen] = useState(false)
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20 gap-8">
           {/* Left menu items */}
           <div className="hidden md:flex items-center gap-8 flex-1">
-            <Link
-              href="/shop"
-              className="text-sm font-medium tracking-wide hover:text-accent transition-colors duration-500"
-            >
-              SHOP
-            </Link>
+            <div className="relative">
+              <button
+                onMouseEnter={() => setIsShopOpen(true)}
+                onMouseLeave={() => setIsShopOpen(false)}
+                className="text-sm font-medium tracking-wide hover:text-accent transition-colors duration-500"
+              >
+                SHOP
+              </button>
+              {isShopOpen && (
+                <div
+                  onMouseEnter={() => setIsShopOpen(true)}
+                  onMouseLeave={() => setIsShopOpen(false)}
+                  className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-lg py-2"
+                >
+                  <Link
+                    href="/products/gemderma-pro"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition-colors duration-300"
+                  >
+                    GemDerma Pro
+                  </Link>
+                  <Link
+                    href="/products/gemsan"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition-colors duration-300"
+                  >
+                    GemSan
+                  </Link>
+                  <Link
+                    href="/products/gemderma-eye"
+                    className="block px-4 py-3 text-sm hover:bg-muted transition-colors duration-300"
+                  >
+                    GemDerma Eye
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/about"
               className="text-sm font-medium tracking-wide hover:text-accent transition-colors duration-500"
