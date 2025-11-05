@@ -67,14 +67,14 @@ export function Footer() {
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© 2025 GemDerma Beauty. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-accent transition-colors duration-500">
+            <Link href="/privacy-policy" className="hover:text-accent transition-colors duration-500">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-accent transition-colors duration-500">
+            <Link href="/terms-of-service" className="hover:text-accent transition-colors duration-500">
               Terms of Service
             </Link>
-            <Link href="/shipping" className="hover:text-accent transition-colors duration-500">
-              Shipping & Returns
+            <Link href="/accessibility" className="hover:text-accent transition-colors duration-500">
+              Accessibility
             </Link>
           </div>
         </div>

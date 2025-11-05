@@ -18,7 +18,7 @@ export function HeroSection() {
           onLoadedData={() => setIsVideoLoaded(true)}
         >
           <source
-            src="/skin-repair-regeneration.mp4?query=close-up macro shot of skin cells rejuvenating healing repair process glowing bio-luminescent dermatology treatment clinical beauty skincare technology"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Black%20and%20Cream%20Simple%20Minimalist%20Business%20Pitch%20Deck%20Presentation%20%283%29-Lo4TEnZ33vyPY46fAvrPyPjeokuclU.mp4"
             type="video/mp4"
           />
         </video>
