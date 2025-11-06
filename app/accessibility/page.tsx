@@ -183,11 +183,12 @@ export default function AccessibilityPage() {
                   <Link href="mailto:accessibility@gemderma.com" className="text-accent hover:underline">
                     info@gemderma.com
                   </Link>
-              <p className="text-muted-foreground leading-relaxed mt-6">
-                We aim to respond to accessibility feedback within 5 business days.
-              </p>
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-6">
+                  We aim to respond to accessibility feedback within 5 business days.
+                </p>
+              </div>
             </div>
-              </p>
 
             {/* Alternative Access */}
             <div>
