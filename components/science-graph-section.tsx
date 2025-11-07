@@ -10,7 +10,7 @@ export function ScienceGraphSection() {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-5xl md:text-6xl font-bold leading-tight text-balance text-amber-900">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance text-amber-900">
                 A Breakthrough in Skincare Device
               </h2>
             </div>

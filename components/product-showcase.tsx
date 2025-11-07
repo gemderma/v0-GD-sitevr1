@@ -34,9 +34,9 @@ const products = [
 
 export function ProductShowcase() {
   return (
-    <section className="bg-background py-16">
+    <section className="bg-background py-12">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-8">
+        <div className="mb-6">
           <p className="tracking-[0.3em] text-muted-foreground uppercase font-bold text-xl text-left">
             OUR COMMUNITY'S FAVORITES
           </p>
@@ -51,22 +51,26 @@ export function ProductShowcase() {
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 blur-sm"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                    <div className="bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full">
+                      <p className="text-xs font-light tracking-wider text-foreground/80">COMING SOON</p>
+                    </div>
+                  </div>
                   <div className="absolute bottom-3 right-3 bg-white rounded-full p-2.5 shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ShoppingBag className="w-5 h-5 text-foreground" />
                   </div>
                 </div>
               </Link>
 
-              <div className="space-y-2 text-center">
+              <div className="space-y-2 text-center px-1">
                 <Link href={`/products/${product.slug}`}>
-                  <h3 className="font-serif text-base lg:text-lg font-semibold hover:text-accent transition-colors duration-300">
+                  <h3 className="font-serif text-base lg:text-lg font-semibold hover:text-accent transition-colors duration-300 leading-snug">
                     {product.name}
                   </h3>
                 </Link>
-                <p className="text-xs lg:text-sm text-muted-foreground leading-relaxed px-2">{product.description}</p>
-                <p className="text-sm lg:text-base font-medium pt-1">{product.status}</p>
+                <p className="text-xs lg:text-sm text-muted-foreground leading-relaxed">{product.description}</p>
               </div>
             </div>
           ))}

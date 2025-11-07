@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { X } from "lucide-react"
 
@@ -86,8 +87,15 @@ export function Navigation() {
               </Link>
             </div>
 
-            <Link href="/" className="font-serif text-3xl md:text-4xl font-semibold tracking-tight flex-shrink-0">
-              GemDerma
+            <Link href="/" className="flex-shrink-0">
+              <Image
+                src="/gemderma-logo.png"
+                alt="GemDerma"
+                width={180}
+                height={60}
+                className="h-10 md:h-12 w-auto"
+                priority
+              />
             </Link>
 
             <div className="flex md:hidden">
