@@ -28,8 +28,30 @@ const cormorantItalic = Cormorant({
 })
 
 export const metadata: Metadata = {
-  title: "Lumière Beauty | Clinical Luxury Beauty Devices",
-  description: "Professional-grade beauty devices with science-backed results. Experience clinical luxury at home.",
+  title: "GemDerma Beauty | Clinical Luxury Beauty Devices",
+  description:
+    "Professional-grade Korean beauty devices with science-backed results. Experience clinical luxury skincare at home with GemDerma Pro, GemSan, and GemDerma Eye.",
+  keywords: [
+    "beauty devices",
+    "skincare",
+    "Korean beauty",
+    "clinical skincare",
+    "LED therapy",
+    "microcurrent",
+    "luxury beauty",
+  ],
+  authors: [{ name: "GemDerma Beauty" }],
+  openGraph: {
+    title: "GemDerma Beauty | Clinical Luxury Beauty Devices",
+    description: "Professional-grade Korean beauty devices with science-backed results.",
+    siteName: "GemDerma Beauty",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GemDerma Beauty | Clinical Luxury Beauty Devices",
+    description: "Professional-grade Korean beauty devices with science-backed results.",
+  },
   generator: "v0.app",
 }
 
