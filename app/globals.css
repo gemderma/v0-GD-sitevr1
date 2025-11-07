@@ -79,6 +79,10 @@
   /* Reverted to original elegant serif and sans-serif fonts */
   --font-sans: "Inter", "Inter Fallback";
   --font-serif: "Cormorant Garamond", "Cormorant Garamond Fallback";
+  /* Added Playfair Display as luxury display font similar to PF Regal Text Pro */
+  --font-display: "Playfair Display", "Playfair Display Fallback";
+  /* Changed to Cormorant italic for professional, elegant cursive */
+  --font-script: "Cormorant", "Cormorant Fallback";
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
   --color-card: rgb(var(--card));

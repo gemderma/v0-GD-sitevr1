@@ -8,6 +8,7 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <video
           autoPlay
@@ -22,32 +23,30 @@ export function HeroSection() {
             type="video/mp4"
           />
         </video>
-        {/* Dark overlay to make text readable */}
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* Content overlay */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-32">
-        <div className="flex flex-col items-center gap-8 max-w-2xl">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-white text-center uppercase tracking-wide">
-            Your Clinic. Your Home. Your Glow.
-          </h1>
+      <div className="absolute bottom-0 left-0 right-0 z-10 pb-20 px-6 lg:px-16">
+        <div className="container mx-auto">
+          {/* Headings stacked vertically with generous spacing */}
+          <div className="space-y-4 mb-12">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-normal text-white leading-tight tracking-wide">
+              Your Clinic. Your Home. Your Glow.
+            </h1>
+            <h2 className="font-script text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white/95 italic font-light">
+              Korean Derm-Level Care
+            </h2>
+          </div>
 
-          {/* Subtitle with attribution */}
-          <p className="text-white text-center text-base md:text-lg leading-relaxed max-w-xl">
-            Meet GemDerma, a New Skincare Brand From Stockholm With Inclusivity at Its Core{" "}
-            <span className="font-serif italic">— VOGUE</span>
-          </p>
-
-          {/* CTA Button with arrow */}
-          <div className="pt-8">
+          {/* CTA Button positioned below with clear separation */}
+          <div>
             <Button
               size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-500 px-8 py-3 text-base font-medium flex items-center gap-3"
+              className="bg-white text-black hover:bg-white/90 transition-all duration-300 px-12 py-7 text-sm font-semibold tracking-wider flex items-center gap-3"
             >
               DISCOVER
               <svg
-                className="w-6 h-4"
+                className="w-5 h-5"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

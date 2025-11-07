@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Cormorant_Garamond, Inter } from "next/font/google"
+import { Cormorant_Garamond, Inter, Playfair_Display, Cormorant } from "next/font/google"
 import "./globals.css"
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -12,6 +12,19 @@ const cormorantGaramond = Cormorant_Garamond({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
+})
+
+const cormorantItalic = Cormorant({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  style: ["italic"],
+  variable: "--font-script",
 })
 
 export const metadata: Metadata = {
@@ -27,7 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorantGaramond.variable} font-sans antialiased`}>{children}</body>
+      <body
+        className={`${inter.variable} ${cormorantGaramond.variable} ${playfairDisplay.variable} ${cormorantItalic.variable} font-sans antialiased`}
+      >
+        {children}
+      </body>
     </html>
   )
 }
