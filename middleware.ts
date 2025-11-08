@@ -2,8 +2,7 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
 export function middleware(request: NextRequest) {
-  // Allow access to the coming-soon page and API routes
-  if (request.nextUrl.pathname === "/coming-soon" || request.nextUrl.pathname.startsWith("/api/")) {
+  if (request.nextUrl.pathname.startsWith("/coming-soon") || request.nextUrl.pathname.startsWith("/api/")) {
     return NextResponse.next()
   }
 

@@ -1,46 +1,32 @@
-"use client"
-
-import type React from "react"
-
-import { useState } from "react"
-import { useRouter } from "next/navigation"
+import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
 
-export default function UnlockPage() {
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
+async function unlockSite(formData: FormData) {
+  "use server"
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setError("")
+  const password = formData.get("password") as string
 
-    try {
-      const response = await fetch("/api/unlock", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ password }),
-      })
+  if (password === "gemderma") {
+    const cookieStore = await cookies()
+    // Set cookie with 30 days expiration
+    cookieStore.set("site-access", "gemderma", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 30, // 30 days
+      path: "/",
+    })
 
-      if (response.ok) {
-        router.push("/")
-        router.refresh()
-      } else {
-        setError("Invalid password")
-      }
-    } catch (err) {
-      setError("Something went wrong")
-    } finally {
-      setIsLoading(false)
-    }
+    redirect("/")
   }
 
+  return { error: "Invalid password" }
+}
+
+export default function UnlockPage() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="max-w-md w-full space-y-8">
@@ -56,21 +42,13 @@ export default function UnlockPage() {
           <p className="text-sm text-muted-foreground">Enter the password to preview the site</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form action={unlockSite} className="space-y-4">
           <div>
-            <Input
-              type="password"
-              placeholder="Enter password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="h-12"
-              required
-            />
-            {error && <p className="text-sm text-red-500 mt-2">{error}</p>}
+            <Input type="password" name="password" placeholder="Enter password" className="h-12" required />
           </div>
 
-          <Button type="submit" disabled={isLoading} className="w-full h-12">
-            {isLoading ? "Unlocking..." : "Access Site"}
+          <Button type="submit" className="w-full h-12">
+            Access Site
           </Button>
         </form>
 

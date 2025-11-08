@@ -84,7 +84,7 @@ export default function WaitlistPage() {
             {!isSubmitted ? (
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-lg p-8">
                 <h2 className="text-2xl font-light text-white text-center mb-2 tracking-wide">Join Our Waitlist</h2>
-                <p className="text-sm text-white/70 text-center mb-8 font-light">Be the first to know when we launch</p>
+                <p className="text-sm text-white/70 text-center mb-8 font-light">Access Korean derm-level care that treats skin, scalp, and barrier together—no appointment needed 🏠</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-3">
