@@ -8,7 +8,6 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="space-y-4">
             <Image src="/gemderma-logo.png" alt="GemDerma" width={180} height={60} className="h-10 w-auto mb-2" />
-            <h3 className="font-serif text-2xl font-bold">GemDerma</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Clinical luxury beauty devices engineered for transformative results.
             </p>

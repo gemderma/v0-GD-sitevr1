@@ -268,6 +268,17 @@ export default function PrivacyPolicyPage() {
             </p>
           </section>
 
+          {/* Notice at Collection for California Residents */}
+          <section>
+            <h2 className="font-serif text-3xl font-bold mb-4">Notice at Collection for California Residents</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              In compliance with the California Consumer Privacy Act (CCPA), we inform consumers that we collect the
+              following categories of personal information: identifiers (such as name and email address) for the
+              purposes of providing newsletters, updates, and marketing communications. We do not sell or share your
+              personal information. For more details, see "How We Use Your Information" above.
+            </p>
+          </section>
+
           {/* Changes to This Privacy Policy */}
           <section>
             <h2 className="font-serif text-3xl font-bold mb-4">Changes to This Privacy Policy</h2>
