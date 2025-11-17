@@ -14,7 +14,7 @@ export default function InstagramSignupPage() {
         <header className="w-full py-6 px-4">
           <div className="max-w-4xl mx-auto flex justify-center">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GemDerma%20Logo_vr3-6KiGpLjfaLX9S6lYvGhR8VcnoLQdGf.png"
+              src="/images/design-mode/GemDerma%20Logo_vr3.png"
               alt="GemDerma Beauty"
               width={280}
               height={80}
